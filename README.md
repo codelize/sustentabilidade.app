@@ -22,32 +22,30 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
    npx react-native run-android
    
 
-                                                > *Nota*: 
-                                                Se estiver utilizando iOS, substitua o comando acima por npx react-native run-ios.
+                                                > *Nota*: 💡
+       O desenvolvimento deste projeto trouxe alguns desafios, 
+       como a navegação fluida entre telas e a adaptação da interface 
+       ao teclado virtual em dispositivos móveis. Foi necessário utilizar 
+       componentes como o KeyboardAvoidingView para garantir que o layout 
+       não fosse prejudicado. Outro ponto interessante foi a implementação 
+       do modal para editar desafios, que trouxe uma boa flexibilidade ao 
+       design e usabilidade.
 
-                                                                                            💡
-O desenvolvimento deste projeto trouxe alguns desafios, como a navegação fluida entre telas e a adaptação da interface ao teclado virtual em dispositivos móveis. Foi necessário utilizar componentes como o KeyboardAvoidingView para garantir que o layout não fosse prejudicado. Outro ponto interessante foi a implementação do modal para editar desafios, que trouxe uma boa flexibilidade ao design e usabilidade.
+       Embora esta versão inicial contenha funcionalidades básicas, foi uma 
+       ótima oportunidade para aprender e aplicar conceitos de React Navigation 
+       e gerenciamento de estados com hooks, pavimentando o caminho para futuras 
+       implementações com funcionalidades mais avançadas.
 
-Embora esta versão inicial contenha funcionalidades básicas, foi uma ótima oportunidade para aprender e aplicar conceitos de *React Navigation* e gerenciamento de estados com hooks, pavimentando o caminho para futuras implementações com funcionalidades mais avançadas.
+                                                                                            
+
 
 ## 📂 Estrutura de Pastas
 
 A estrutura do projeto está organizada da seguinte forma:
 
 
-/src
-  /assets                     # Ícones e imagens
-  /navigation                 # Arquivos de navegação
-    AppNavigator.js           # Configuração principal do navegador
-    HomeStackNavigator.js     # Navegação em pilha para a Home
-  /screens                    # Telas da aplicação
-    ChallengeScreen.js        # Tela para visualizar e editar desafios
-    HomeScreen.js             # Tela inicial de boas-vindas
-    LoadingScreen.js          # Tela de loading
-    SettingsScreen.js         # Tela de configurações
-  /styles                     # Estilos globais
-    GlobalStyles.js           # Arquivo de estilos centralizado
-App.js                        # Arquivo principal da aplicação
+![image](https://github.com/user-attachments/assets/c2cc045e-99c6-4b81-93cd-16bfac4c2ba1)
+
 
 
 ## 🔧 Componentes Utilizados e Justificativas
