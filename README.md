@@ -9,7 +9,7 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 1. *Clone o repositório*:
 
    bash
-   git clone https://github.com/seuusuario/seuprojeto.git
+   git clone https://github.com/codelize/sustentabilidade.app.git
    
 
 2. *Entre na pasta do projeto*:
