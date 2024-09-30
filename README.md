@@ -7,33 +7,25 @@
 Siga os passos abaixo para configurar e executar o projeto em seu ambiente local:
 
 1. *Clone o repositório*:
-
-   bash
    git clone https://github.com/codelize/sustentabilidade.app.git
    
 
 2. *Entre na pasta do projeto*:
-
-   bash
    cd sustentabilidade-app-master
    
 
 3. *Instale as dependências*:
-
-   bash
    npm install
    
 
 4. *Execute o projeto no Android*:
-
-   bash
    npx react-native run-android
    
 
-> *Nota*: Se estiver utilizando iOS, substitua o comando acima por npx react-native run-ios.
+                                                > *Nota*: 
+                                                Se estiver utilizando iOS, substitua o comando acima por npx react-native run-ios.
 
-## 💡 Depoimento sobre o Desenvolvimento
-
+                                                                                            💡
 O desenvolvimento deste projeto trouxe alguns desafios, como a navegação fluida entre telas e a adaptação da interface ao teclado virtual em dispositivos móveis. Foi necessário utilizar componentes como o KeyboardAvoidingView para garantir que o layout não fosse prejudicado. Outro ponto interessante foi a implementação do modal para editar desafios, que trouxe uma boa flexibilidade ao design e usabilidade.
 
 Embora esta versão inicial contenha funcionalidades básicas, foi uma ótima oportunidade para aprender e aplicar conceitos de *React Navigation* e gerenciamento de estados com hooks, pavimentando o caminho para futuras implementações com funcionalidades mais avançadas.
@@ -44,18 +36,18 @@ A estrutura do projeto está organizada da seguinte forma:
 
 
 /src
-  /assets               # Ícones e imagens
-  /navigation           # Arquivos de navegação
-    AppNavigator.js     # Configuração principal do navegador
-    HomeStackNavigator.js # Navegação em pilha para a Home
-  /screens              # Telas da aplicação
-    ChallengeScreen.js  # Tela para visualizar e editar desafios
-    HomeScreen.js       # Tela inicial de boas-vindas
-    LoadingScreen.js    # Tela de loading
-    SettingsScreen.js   # Tela de configurações
-  /styles               # Estilos globais
-    GlobalStyles.js     # Arquivo de estilos centralizado
-App.js                  # Arquivo principal da aplicação
+  /assets                     # Ícones e imagens
+  /navigation                 # Arquivos de navegação
+    AppNavigator.js           # Configuração principal do navegador
+    HomeStackNavigator.js     # Navegação em pilha para a Home
+  /screens                    # Telas da aplicação
+    ChallengeScreen.js        # Tela para visualizar e editar desafios
+    HomeScreen.js             # Tela inicial de boas-vindas
+    LoadingScreen.js          # Tela de loading
+    SettingsScreen.js         # Tela de configurações
+  /styles                     # Estilos globais
+    GlobalStyles.js           # Arquivo de estilos centralizado
+App.js                        # Arquivo principal da aplicação
 
 
 ## 🔧 Componentes Utilizados e Justificativas
