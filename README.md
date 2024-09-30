@@ -80,3 +80,11 @@ Os estilos globais do aplicativo são definidos no arquivo GlobalStyles.js, para
 - *modalContainer*: Estilo para o fundo escuro do modal de edição.
 - *modalContent*: Estilo do conteúdo exibido dentro do modal, garantindo centralização e boa usabilidade.
 - *modalInput*: Estilo para o campo de entrada dentro do modal, mantendo o mesmo padrão visual do restante do app.
+
+
+      > RM E INTEGRANTES
+      RM99487  - Alef Gabriel Alves Silva
+      RM99752  - Danilo Araujo Mendonça
+      RM98249  - Felipe Sieiro Paim dos Santos 
+      RM551509 - Leonardo Ferreira Lizier
+      RM99838  - Rodrigo Gonçalves Teixeira Filho
