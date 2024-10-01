@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, FlatList, TouchableOpacity, Alert, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, Platform, Modal } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage'; // Importar AsyncStorage
 import GlobalStyles from '../styles/GlobalStyles';
 
 const ChallengeScreen = () => {
@@ -9,18 +10,52 @@ const ChallengeScreen = () => {
   const [editText, setEditText] = useState('');
   const [editId, setEditId] = useState(null);
 
+  // Função para salvar os desafios no AsyncStorage
+  const saveChallengesToStorage = async (challenges) => {
+    try {
+      await AsyncStorage.setItem('challenges', JSON.stringify(challenges)); // Converte os desafios para string e salva
+    } catch (error) {
+      console.log('Erro ao salvar desafios:', error);
+    }
+  };
+
+  // Função para carregar os desafios ao iniciar o app
+  const loadChallengesFromStorage = async () => {
+    try {
+      const storedChallenges = await AsyncStorage.getItem('challenges'); // Recupera os desafios
+      if (storedChallenges !== null) {
+        setChallenges(JSON.parse(storedChallenges)); // Converte de volta para array e atualiza o estado
+      }
+    } catch (error) {
+      console.log('Erro ao carregar desafios:', error);
+    }
+  };
+
+  // Carregar os desafios quando o app iniciar
+  useEffect(() => {
+    loadChallengesFromStorage();
+  }, []);
+
+  // Salva os desafios sempre que houver uma mudança
+  useEffect(() => {
+    if (challenges.length > 0) {
+      saveChallengesToStorage(challenges);
+    }
+  }, [challenges]);
+
   const handleSave = () => {
     if (inputText.trim() === '') {
       Alert.alert('Erro', 'O desafio não pode estar vazio!');
       return;
     }
 
-    setChallenges([...challenges, { id: Date.now().toString(), text: inputText }]);
+    const newChallenge = { id: Date.now().toString(), text: inputText };
+    setChallenges([...challenges, newChallenge]); // Adiciona o novo desafio
     setInputText('');
   };
 
   const handleDelete = (id) => {
-    setChallenges(challenges.filter((challenge) => challenge.id !== id));
+    setChallenges(challenges.filter((challenge) => challenge.id !== id)); // Filtra os desafios e remove o selecionado
   };
 
   const handleEdit = () => {
@@ -65,20 +100,20 @@ const ChallengeScreen = () => {
             <TextInput
               style={GlobalStyles.input}
               placeholder="Escreva seu desafio"
-              placeholderTextColor="#59981a" // Cor do placeholder ajustada para branco
+              placeholderTextColor="#59981a"
               value={inputText}
               onChangeText={setInputText}
             />
             <Button title="Salvar Desafio" onPress={handleSave} />
           </View>
 
-          {/* FlatList com rolagem habilitada */}
+          {/* Lista de desafios */}
           <FlatList
             data={challenges}
             keyExtractor={(item) => item.id}
             renderItem={renderChallengeItem}
-            style={{ flex: 1 }} // Garante que o FlatList ocupe todo o espaço disponível para rolar
-            contentContainerStyle={{ paddingBottom: 20 }} // Adiciona espaçamento na parte inferior
+            style={{ flex: 1 }}
+            contentContainerStyle={{ paddingBottom: 20 }}
           />
 
           {/* Modal para edição */}
@@ -97,7 +132,7 @@ const ChallengeScreen = () => {
                     value={editText}
                     onChangeText={setEditText}
                     placeholder="Edite seu desafio"
-                    placeholderTextColor="#ffffff" // Cor do placeholder ajustada para branco
+                    placeholderTextColor="#ffffff"
                   />
                   <Button title="Salvar" onPress={handleEdit} />
                   <Button title="Cancelar" onPress={() => setModalVisible(false)} />
