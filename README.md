@@ -118,12 +118,12 @@ Os estilos globais do aplicativo são definidos no arquivo GlobalStyles.js, para
 ## Telas
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dfdd1543-0d65-4408-adce-2d57b294ce57" alt="image" width="200"/>
-  <img src="https://github.com/user-attachments/assets/c381ee0d-f806-4017-bbae-74958743bff6" alt="image" width="200"/>
-  <img src="https://github.com/user-attachments/assets/56330f9f-515b-4bd1-ac22-482ce4ab0a81" alt="image" width="200"/>
-  <img src="https://github.com/user-attachments/assets/3db07ef1-9442-4ba2-b203-6888f20a3f0c" alt="image" width="200"/>
-  <img src="https://github.com/user-attachments/assets/7148aa4a-4f22-496d-8269-013711c22bc4" alt="image" width="200"/>
-  <img src="https://github.com/user-attachments/assets/262bfef5-7b7d-4366-9b48-e44f197dc145" alt="image" width="200"/>
+  <img src="https://github.com/user-attachments/assets/dfdd1543-0d65-4408-adce-2d57b294ce57" alt="image" width="250"/>
+  <img src="https://github.com/user-attachments/assets/c381ee0d-f806-4017-bbae-74958743bff6" alt="image" width="250"/>
+  <img src="https://github.com/user-attachments/assets/56330f9f-515b-4bd1-ac22-482ce4ab0a81" alt="image" width="250"/>
+  <img src="https://github.com/user-attachments/assets/3db07ef1-9442-4ba2-b203-6888f20a3f0c" alt="image" width="250"/>
+  <img src="https://github.com/user-attachments/assets/7148aa4a-4f22-496d-8269-013711c22bc4" alt="image" width="250"/>
+  <img src="https://github.com/user-attachments/assets/262bfef5-7b7d-4366-9b48-e44f197dc145" alt="image" width="250"/>
 </p>
 
 
