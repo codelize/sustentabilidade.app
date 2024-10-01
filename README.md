@@ -44,7 +44,9 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 A estrutura do projeto está organizada da seguinte forma:
 
 
-![image](https://github.com/user-attachments/assets/c2cc045e-99c6-4b81-93cd-16bfac4c2ba1)
+![image](https://github.com/user-attachments/assets/199e29dc-cc18-4882-8600-1aea6fd2da13)
+
+
 
 
 
