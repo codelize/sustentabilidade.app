@@ -1,4 +1,4 @@
-🌿 Sustentabilidade App - Versão 1
+🌿 Sustentabilidade App 
 
 *Sustentabilidade App* é um aplicativo de *organização pessoal* focado em ajudar os usuários a criarem e acompanharem desafios de sustentabilidade. Com este app, é possível adicionar, editar e remover desafios personalizados, incentivando práticas sustentáveis no dia a dia. Esta versão é uma implementação básica, com funcionalidades essenciais. Futuras versões trarão melhorias e novos recursos.
 
