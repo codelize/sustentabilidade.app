@@ -6,27 +6,27 @@ const GlobalStyles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#1b1f23', // Cor de fundo escura
+    backgroundColor: '#1b1f23', 
   },
   text: {
     fontSize: 18,
-    color: '#a4d4ae', // Texto em verde claro para contraste com o fundo escuro
+    color: '#a4d4ae', 
     marginBottom: 10,
     textAlign: 'center',
   },
   input: {
     height: 40,
-    borderColor: '#4CAF50', // Borda verde
+    borderColor: '#4CAF50', 
     borderWidth: 1,
     marginBottom: 12,
     paddingHorizontal: 10,
-    backgroundColor: '#2e2e2e', // Cor de fundo escura
-    color: '#a4d4ae', // Texto do input em verde claro
+    backgroundColor: '#2e2e2e', 
+    color: '#a4d4ae', 
     width: '100%',
     borderRadius: 5,
   },
   button: {
-    backgroundColor: '#4CAF50', // Botão verde
+    backgroundColor: '#4CAF50', 
     padding: 12,
     borderRadius: 5,
     alignItems: 'center',
@@ -35,21 +35,21 @@ const GlobalStyles = StyleSheet.create({
     width: '100%',
   },
   buttonText: {
-    color: '#fff', // Texto branco para contraste
+    color: '#fff', 
     fontSize: 16,
     fontWeight: 'bold',
   },
   formContainer: {
     flex: 1,
-    justifyContent: 'center', // Centraliza o formulário verticalmente
-    alignItems: 'center',      // Centraliza horizontalmente
+    justifyContent: 'center', 
+    alignItems: 'center',      
   },
   challengeListContainer: {
     flex: 1,
-    maxHeight: height * 0.4, // Limitar a altura da lista de desafios a 40% da altura da tela
+    maxHeight: height * 0.4, 
   },
   listContentContainer: {
-    paddingBottom: 20, // Garante espaço no final da lista
+    paddingBottom: 20, 
   },
   challengeItem: {
     flexDirection: 'row',
@@ -57,9 +57,9 @@ const GlobalStyles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 15,
     paddingHorizontal: 10,
-    borderBottomColor: '#4CAF50', // Linha inferior verde
+    borderBottomColor: '#4CAF50', 
     borderBottomWidth: 1,
-    backgroundColor: '#2e2e2e', // Fundo do item em tom escuro
+    backgroundColor: '#2e2e2e', 
     borderRadius: 5,
     marginBottom: 10,
   },
@@ -67,23 +67,23 @@ const GlobalStyles = StyleSheet.create({
     flexDirection: 'row',
   },
   editButton: {
-    color: '#4CAF50', // Botão de edição verde
+    color: '#4CAF50', 
     fontSize: 14,
     marginRight: 10,
   },
   deleteButton: {
-    color: '#e57373', // Botão de exclusão vermelho claro
+    color: '#e57373', 
     fontSize: 14,
   },
   modalContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Fundo escuro mais transparente para o modal
+    backgroundColor: 'rgba(0, 0, 0, 0.8)', 
   },
   modalContent: {
     width: '80%',
-    backgroundColor: '#2e2e2e', // Fundo do modal em tom escuro
+    backgroundColor: '#2e2e2e', 
     borderRadius: 10,
     padding: 20,
     alignItems: 'center',
@@ -92,18 +92,18 @@ const GlobalStyles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#a4d4ae', // Título do modal em verde claro
+    color: '#a4d4ae', 
   },
   modalInput: {
     height: 40,
-    borderColor: '#4CAF50', // Borda verde para o input no modal
+    borderColor: '#4CAF50', 
     borderWidth: 1,
     marginBottom: 12,
     paddingHorizontal: 10,
     width: '100%',
     borderRadius: 5,
-    backgroundColor: '#2e2e2e', // Fundo do input no modal em tom escuro
-    color: '#a4d4ae', // Texto do input no modal em verde claro
+    backgroundColor: '#2e2e2e', 
+    color: '#a4d4ae', 
   },
 });
 

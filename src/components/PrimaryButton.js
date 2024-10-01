@@ -11,14 +11,14 @@ const PrimaryButton = ({ title, onPress }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#4CAF50', // Verde
+    backgroundColor: '#4CAF50', 
     paddingVertical: 10,
     paddingHorizontal: 40,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
-    width: '80%', // Largura fixa para garantir o mesmo tamanho
+    width: '80%', 
   },
   buttonText: {
     color: '#fff',

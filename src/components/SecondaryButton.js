@@ -11,14 +11,14 @@ const SecondaryButton = ({ title, onPress }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#e57373', // Vermelho claro
+    backgroundColor: '#e57373', 
     paddingVertical: 10,
     paddingHorizontal: 40,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
-    width: '80%', // Largura fixa para garantir o mesmo tamanho
+    width: '80%', 
   },
   buttonText: {
     color: '#fff',

@@ -113,7 +113,7 @@ Os estilos globais do aplicativo são definidos no arquivo GlobalStyles.js, para
 - *modalInput*: Estilo para o campo de entrada dentro do modal, mantendo o mesmo padrão visual do restante do app.
 
 
-      > RM E INTEGRANTES
+      > RM E INTEGRANTES 
       RM99487  - Alef Gabriel Alves Silva
       RM99752  - Danilo Araujo Mendonça
       RM98249  - Felipe Sieiro Paim dos Santos 
