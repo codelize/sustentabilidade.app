@@ -53,39 +53,50 @@ A estrutura do projeto está organizada da seguinte forma:
 
 ## 🔧 Componentes Utilizados
 
-1. 🧭 Navigation
-Local: AppNavigator.js, HomeStackNavigator.js
-Função: Gerencia a navegação entre telas usando NavigationContainer, createStackNavigator, e createBottomTabNavigator.
-2. 📦 View
-Local: Todas as telas
-Função: Contêiner principal que organiza e estrutura os elementos nas telas.
-3. 📚 StackView
-Local: AppNavigator.js, HomeStackNavigator.js
-Função: Controla a navegação em pilha, permitindo a navegação entre telas de forma empilhada.
-4. 🖼️ Header
-Local: AppNavigator.js, HomeStackNavigator.js
-Função: Cabeçalho configurado como oculto (headerShown: false), mas disponível para exibir títulos ou botões de navegação.
-5. 🔀 Stack Navigation
-Local: AppNavigator.js, HomeStackNavigator.js
-Função: Organiza a navegação entre as telas de login e as telas principais do aplicativo.
-6. 🗂️ BottomTabNavigator
-Local: AppNavigator.js
-Função: Cria uma barra de navegação inferior para alternar entre Home, Desafios e Configurações.
-7. 📝 Text
-Local: Todas as telas
-Função: Exibe textos como títulos, descrições e mensagens ao usuário.
-8. ✍️ InputText
-Local: LoginScreen.js, ChallengeScreen.js
-Função: Captura a entrada de texto do usuário para login e criação de novos desafios.
-9. 🔘 Button
-Local: LoginScreen.js, HomeScreen.js, ChallengeScreen.js
-Função: Botões que permitem ações como "Entrar", "Salvar Desafio" e "Sair".
-10. 🚨 Alert
-Local: LoginScreen.js, ChallengeScreen.js
-Função: Exibe mensagens de alerta como feedback para o usuário, como erro no login ou tentativa de salvar um desafio vazio.
-11. 💾 AsyncStorage
-Local: AppNavigator.js, LoginScreen.js, HomeScreen.js
-Função: Armazena dados localmente, como o status de login, permitindo que o usuário continue autenticado entre sessões.
+1.  **Navigation**
+   - **Local:** `AppNavigator.js`, `HomeStackNavigator.js`
+   - **Função:** Gerencia a navegação entre telas usando `NavigationContainer`, `createStackNavigator`, e `createBottomTabNavigator`.
+
+2.  **View**
+   - **Local:** Todas as telas
+   - **Função:** Contêiner principal que organiza e estrutura os elementos nas telas.
+
+3.  **StackView**
+   - **Local:** `AppNavigator.js`, `HomeStackNavigator.js`
+   - **Função:** Controla a navegação em pilha, permitindo a navegação entre telas de forma empilhada.
+
+4.  **Header**
+   - **Local:** `AppNavigator.js`, `HomeStackNavigator.js`
+   - **Função:** Cabeçalho configurado como oculto (`headerShown: false`), mas disponível para exibir títulos ou botões de navegação.
+
+5.  **Stack Navigation**
+   - **Local:** `AppNavigator.js`, `HomeStackNavigator.js`
+   - **Função:** Organiza a navegação entre as telas de login e as telas principais do aplicativo.
+
+6.  **BottomTabNavigator**
+   - **Local:** `AppNavigator.js`
+   - **Função:** Cria uma barra de navegação inferior para alternar entre Home, Desafios e Configurações.
+
+7.  **Text**
+   - **Local:** Todas as telas
+   - **Função:** Exibe textos como títulos, descrições e mensagens ao usuário.
+
+8.  **InputText**
+   - **Local:** `LoginScreen.js`, `ChallengeScreen.js`
+   - **Função:** Captura a entrada de texto do usuário para login e criação de novos desafios.
+
+9.  **Button**
+   - **Local:** `LoginScreen.js`, `HomeScreen.js`, `ChallengeScreen.js`
+   - **Função:** Botões que permitem ações como "Entrar", "Salvar Desafio" e "Sair".
+
+10.  **Alert**
+    - **Local:** `LoginScreen.js`, `ChallengeScreen.js`
+    - **Função:** Exibe mensagens de alerta como feedback para o usuário, como erro no login ou tentativa de salvar um desafio vazio.
+
+11.  **AsyncStorage**
+    - **Local:** `AppNavigator.js`, `LoginScreen.js`, `HomeScreen.js`
+    - **Função:** Armazena dados localmente, como o status de login, permitindo que o usuário continue autenticado entre sessões.
+
 
 ## 🎨 Estilos (GlobalStyles.js)
 
