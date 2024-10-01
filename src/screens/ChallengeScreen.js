@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, FlatList, TouchableOpacity, Alert, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, Platform, Modal } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage'; // Importar AsyncStorage
+import { View, Text, TextInput, FlatList, TouchableOpacity, Alert, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, Platform, Modal } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import GlobalStyles from '../styles/GlobalStyles';
+import PrimaryButton from '../components/PrimaryButton'; // Botão primário
+import SecondaryButton from '../components/SecondaryButton'; // Botão secundário
 
 const ChallengeScreen = () => {
   const [inputText, setInputText] = useState('');
@@ -10,33 +12,29 @@ const ChallengeScreen = () => {
   const [editText, setEditText] = useState('');
   const [editId, setEditId] = useState(null);
 
-  // Função para salvar os desafios no AsyncStorage
   const saveChallengesToStorage = async (challenges) => {
     try {
-      await AsyncStorage.setItem('challenges', JSON.stringify(challenges)); // Converte os desafios para string e salva
+      await AsyncStorage.setItem('challenges', JSON.stringify(challenges));
     } catch (error) {
       console.log('Erro ao salvar desafios:', error);
     }
   };
 
-  // Função para carregar os desafios ao iniciar o app
   const loadChallengesFromStorage = async () => {
     try {
-      const storedChallenges = await AsyncStorage.getItem('challenges'); // Recupera os desafios
+      const storedChallenges = await AsyncStorage.getItem('challenges');
       if (storedChallenges !== null) {
-        setChallenges(JSON.parse(storedChallenges)); // Converte de volta para array e atualiza o estado
+        setChallenges(JSON.parse(storedChallenges));
       }
     } catch (error) {
       console.log('Erro ao carregar desafios:', error);
     }
   };
 
-  // Carregar os desafios quando o app iniciar
   useEffect(() => {
     loadChallengesFromStorage();
   }, []);
 
-  // Salva os desafios sempre que houver uma mudança
   useEffect(() => {
     if (challenges.length > 0) {
       saveChallengesToStorage(challenges);
@@ -50,12 +48,12 @@ const ChallengeScreen = () => {
     }
 
     const newChallenge = { id: Date.now().toString(), text: inputText };
-    setChallenges([...challenges, newChallenge]); // Adiciona o novo desafio
+    setChallenges([...challenges, newChallenge]);
     setInputText('');
   };
 
   const handleDelete = (id) => {
-    setChallenges(challenges.filter((challenge) => challenge.id !== id)); // Filtra os desafios e remove o selecionado
+    setChallenges(challenges.filter((challenge) => challenge.id !== id));
   };
 
   const handleEdit = () => {
@@ -69,7 +67,7 @@ const ChallengeScreen = () => {
   const renderChallengeItem = ({ item }) => {
     return (
       <View style={GlobalStyles.challengeItem}>
-        <Text style={GlobalStyles.text}>{item.text}</Text>
+        <Text style={GlobalStyles.challengeText}>{item.text}</Text>
         <View style={GlobalStyles.buttonsContainer}>
           <TouchableOpacity onPress={() => openEditModal(item.id, item.text)}>
             <Text style={GlobalStyles.editButton}>Editar</Text>
@@ -104,10 +102,10 @@ const ChallengeScreen = () => {
               value={inputText}
               onChangeText={setInputText}
             />
-            <Button title="Salvar Desafio" onPress={handleSave} />
+            {/* Usando o botão primário */}
+            <PrimaryButton title="Salvar Desafio" onPress={handleSave} /> 
           </View>
 
-          {/* Lista de desafios */}
           <FlatList
             data={challenges}
             keyExtractor={(item) => item.id}
@@ -134,8 +132,10 @@ const ChallengeScreen = () => {
                     placeholder="Edite seu desafio"
                     placeholderTextColor="#ffffff"
                   />
-                  <Button title="Salvar" onPress={handleEdit} />
-                  <Button title="Cancelar" onPress={() => setModalVisible(false)} />
+                  {/* Usando o botão primário */}
+                  <PrimaryButton title="Salvar" onPress={handleEdit} />
+                  {/* Usando o botão secundário para cancelar */}
+                  <SecondaryButton title="Cancelar" onPress={() => setModalVisible(false)} />
                 </View>
               </View>
             </TouchableWithoutFeedback>
