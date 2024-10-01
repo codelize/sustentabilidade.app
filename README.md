@@ -20,7 +20,10 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 
 4. *Execute o projeto no Android*:
    npx react-native run-android
-   
+
+       > *Nota*:
+       usuário: admin
+       senha: password123
 
                                                 > *Nota*: 💡
        O desenvolvimento deste projeto trouxe alguns desafios, 
