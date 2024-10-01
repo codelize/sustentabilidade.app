@@ -44,30 +44,48 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 A estrutura do projeto está organizada da seguinte forma:
 
 
-![image](https://github.com/user-attachments/assets/199e29dc-cc18-4882-8600-1aea6fd2da13)
+![image](https://github.com/user-attachments/assets/ff754a0c-e82e-4fce-aa6b-12c2d1585241)
 
 
 
 
 
-## 🔧 Componentes Utilizados e Justificativas
 
-Aqui estão os principais componentes e bibliotecas utilizados no projeto, com suas respectivas funções e justificativas para o uso:
+## 🔧 Componentes Utilizados
 
-- *NavigationContainer*: Envolve toda a aplicação para gerenciar o estado de navegação.
-- *BottomTabNavigator*: Cria uma barra de navegação inferior, permitindo alternar entre as telas principais.
-- *StackNavigator*: Gerencia a navegação em pilha, garantindo transições suaves entre as telas.
-- *Text*: Exibe texto nas telas, como títulos, descrições e mensagens.
-- *View*: Contêiner básico para layouts, usado em quase todas as telas.
-- *TextInput*: Campo de entrada de texto para adicionar e editar desafios personalizados.
-- *Button*: Renderiza botões interativos para salvar ou navegar entre telas.
-- *FlatList*: Renderiza uma lista de desafios com suporte a rolagem e atualização dinâmica.
-- *Modal*: Exibe um modal sobreposto à tela principal para editar desafios.
-- *TouchableOpacity*: Torna os textos e botões clicáveis, usado nos botões "Editar" e "Excluir" na lista de desafios.
-- *Alert*: Mostra mensagens de alerta, como ao tentar salvar um desafio vazio.
-- *KeyboardAvoidingView*: Ajusta o layout quando o teclado aparece, garantindo uma experiência mais suave para o usuário.
-- *Switch*: Componente de alternância (on/off), usado na tela de configurações para controlar lembretes de desafios.
-- *ActivityIndicator*: Exibe um indicador de carregamento durante a tela de loading.
+1. 🧭 Navigation
+Local: AppNavigator.js, HomeStackNavigator.js
+Função: Gerencia a navegação entre telas usando NavigationContainer, createStackNavigator, e createBottomTabNavigator.
+2. 📦 View
+Local: Todas as telas
+Função: Contêiner principal que organiza e estrutura os elementos nas telas.
+3. 📚 StackView
+Local: AppNavigator.js, HomeStackNavigator.js
+Função: Controla a navegação em pilha, permitindo a navegação entre telas de forma empilhada.
+4. 🖼️ Header
+Local: AppNavigator.js, HomeStackNavigator.js
+Função: Cabeçalho configurado como oculto (headerShown: false), mas disponível para exibir títulos ou botões de navegação.
+5. 🔀 Stack Navigation
+Local: AppNavigator.js, HomeStackNavigator.js
+Função: Organiza a navegação entre as telas de login e as telas principais do aplicativo.
+6. 🗂️ BottomTabNavigator
+Local: AppNavigator.js
+Função: Cria uma barra de navegação inferior para alternar entre Home, Desafios e Configurações.
+7. 📝 Text
+Local: Todas as telas
+Função: Exibe textos como títulos, descrições e mensagens ao usuário.
+8. ✍️ InputText
+Local: LoginScreen.js, ChallengeScreen.js
+Função: Captura a entrada de texto do usuário para login e criação de novos desafios.
+9. 🔘 Button
+Local: LoginScreen.js, HomeScreen.js, ChallengeScreen.js
+Função: Botões que permitem ações como "Entrar", "Salvar Desafio" e "Sair".
+10. 🚨 Alert
+Local: LoginScreen.js, ChallengeScreen.js
+Função: Exibe mensagens de alerta como feedback para o usuário, como erro no login ou tentativa de salvar um desafio vazio.
+11. 💾 AsyncStorage
+Local: AppNavigator.js, LoginScreen.js, HomeScreen.js
+Função: Armazena dados localmente, como o status de login, permitindo que o usuário continue autenticado entre sessões.
 
 ## 🎨 Estilos (GlobalStyles.js)
 
