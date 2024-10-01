@@ -53,8 +53,8 @@ A estrutura do projeto está organizada da seguinte forma:
 Aqui estão os principais componentes e bibliotecas utilizados no projeto, com suas respectivas funções e justificativas para o uso:
 
 - *NavigationContainer*: Envolve toda a aplicação para gerenciar o estado de navegação.
-- *createBottomTabNavigator*: Cria uma barra de navegação inferior, permitindo alternar entre as telas principais.
-- *createStackNavigator*: Gerencia a navegação em pilha, garantindo transições suaves entre as telas.
+- *BottomTabNavigator*: Cria uma barra de navegação inferior, permitindo alternar entre as telas principais.
+- *StackNavigator*: Gerencia a navegação em pilha, garantindo transições suaves entre as telas.
 - *Text*: Exibe texto nas telas, como títulos, descrições e mensagens.
 - *View*: Contêiner básico para layouts, usado em quase todas as telas.
 - *TextInput*: Campo de entrada de texto para adicionar e editar desafios personalizados.
