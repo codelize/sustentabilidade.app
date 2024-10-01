@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, FlatList, TouchableOpacity, Alert, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, Platform, Modal } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform, Modal, FlatList } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import GlobalStyles from '../styles/GlobalStyles';
 import PrimaryButton from '../components/PrimaryButton'; // Botão primário
@@ -93,6 +93,7 @@ const ChallengeScreen = () => {
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={GlobalStyles.container}>
+          {/* Formulário para adicionar novos desafios */}
           <View style={GlobalStyles.formContainer}>
             <Text style={GlobalStyles.text}>Insira seu desafio personalizado:</Text>
             <TextInput
@@ -102,17 +103,19 @@ const ChallengeScreen = () => {
               value={inputText}
               onChangeText={setInputText}
             />
-            {/* Usando o botão primário */}
-            <PrimaryButton title="Salvar Desafio" onPress={handleSave} /> 
+            <PrimaryButton title="Salvar Desafio" onPress={handleSave} />
           </View>
 
-          <FlatList
-            data={challenges}
-            keyExtractor={(item) => item.id}
-            renderItem={renderChallengeItem}
-            style={{ flex: 1 }}
-            contentContainerStyle={{ paddingBottom: 20 }}
-          />
+          {/* Desafios */}
+          <View style={GlobalStyles.challengeListContainer}>
+            <FlatList
+              data={challenges}
+              keyExtractor={(item) => item.id}
+              renderItem={renderChallengeItem}
+              contentContainerStyle={GlobalStyles.listContentContainer}
+              showsVerticalScrollIndicator={false} // Oculta barra de rolagem vertical
+            />
+          </View>
 
           {/* Modal para edição */}
           <Modal
@@ -132,9 +135,7 @@ const ChallengeScreen = () => {
                     placeholder="Edite seu desafio"
                     placeholderTextColor="#ffffff"
                   />
-                  {/* Usando o botão primário */}
                   <PrimaryButton title="Salvar" onPress={handleEdit} />
-                  {/* Usando o botão secundário para cancelar */}
                   <SecondaryButton title="Cancelar" onPress={() => setModalVisible(false)} />
                 </View>
               </View>

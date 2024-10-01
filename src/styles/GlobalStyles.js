@@ -44,10 +44,12 @@ const GlobalStyles = StyleSheet.create({
     justifyContent: 'center', // Centraliza o formulário verticalmente
     alignItems: 'center',      // Centraliza horizontalmente
   },
-  list: {
-    flex: 2,  // Garante que a lista ocupe mais espaço verticalmente
-    marginTop: 20,
-    width: '100%',
+  challengeListContainer: {
+    flex: 1,
+    maxHeight: height * 0.4, // Limitar a altura da lista de desafios a 40% da altura da tela
+  },
+  listContentContainer: {
+    paddingBottom: 20, // Garante espaço no final da lista
   },
   challengeItem: {
     flexDirection: 'row',
@@ -106,5 +108,3 @@ const GlobalStyles = StyleSheet.create({
 });
 
 export default GlobalStyles;
-
-

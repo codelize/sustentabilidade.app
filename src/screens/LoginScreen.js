@@ -1,8 +1,8 @@
-// screens/LoginScreen.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, Alert, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform } from 'react-native';
+import { View, Text, TextInput, Alert, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import GlobalStyles from '../styles/GlobalStyles';
+import PrimaryButton from '../components/PrimaryButton'; // Usar o botão primário estilizado
 
 const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
@@ -54,7 +54,8 @@ const LoginScreen = ({ navigation }) => {
             value={password}
             onChangeText={setPassword}
           />
-          <Button title="Entrar" onPress={handleLogin} />
+          {/* Botão de entrar estilizado */}
+          <PrimaryButton title="Entrar" onPress={handleLogin} />
         </View>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
