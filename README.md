@@ -11,7 +11,7 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
    
 
 2. *Entre na pasta do projeto*:
-   cd sustentabilidade.app
+   cd sustentabilidade.app/
    
 
 3. *Instale as dependências*:
